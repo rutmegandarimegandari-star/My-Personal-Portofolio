@@ -153,7 +153,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            cursor: pointer;
         }
 
         .hero-text h1 {
@@ -302,7 +301,7 @@
             font-size: 0.95rem;
         }
 
-        /* Skills Section (Rapi 4 Kiri, 4 Kanan) */
+        /* Skills Section */
         .skills-grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -391,7 +390,6 @@
             gap: 8px;
         }
 
-        /* Styling Efek Hover untuk Gambar yang Bisa Di-klik */
         .img-clickable {
             display: block;
             width: 100%;
@@ -765,7 +763,8 @@
             <div class="hero-image">
                 <div class="profile-shadow-wrapper">
                     <div class="profile-img-container">
-                        <a href="foto-rut.jpg" target="_blank" class="img-clickable">
+                        <!-- Perbaikan: link gambar profil tidak menggunakan target="_blank" agar tidak membuka tab baru -->
+                        <a href="foto-rut.jpg" class="img-clickable">
                             <img src="foto-rut.jpg" alt="Rut Megandari">
                         </a>
                     </div>
@@ -875,16 +874,16 @@
 
                     <div class="exp-media-side grid-eo-original">
                         <div class="media-box eo-box">
-                            <a href="foto-eo-1.jpg" target="_blank" class="img-clickable"><img src="foto-eo-1.jpg" alt="EO 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                            <a href="foto-eo-1.jpg" class="img-clickable"><img src="foto-eo-1.jpg" alt="EO 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
                         </div>
                         <div class="media-box eo-box">
-                            <a href="foto-eo-2.jpg" target="_blank" class="img-clickable"><img src="foto-eo-2.jpg" alt="EO 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                            <a href="foto-eo-2.jpg" class="img-clickable"><img src="foto-eo-2.jpg" alt="EO 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
                         </div>
                         <div class="media-box eo-box">
-                            <a href="foto-eo-3.jpg" target="_blank" class="img-clickable"><img src="foto-eo-3.jpg" alt="EO 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
+                            <a href="foto-eo-3.jpg" class="img-clickable"><img src="foto-eo-3.jpg" alt="EO 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
                         </div>
                         <div class="media-box eo-box">
-                            <a href="foto-eo-4.jpg" target="_blank" class="img-clickable"><img src="foto-eo-4.jpg" alt="EO 4" onerror="this.style.display='none'; this.parentElement.innerText='Photo 4';"></a>
+                            <a href="foto-eo-4.jpg" class="img-clickable"><img src="foto-eo-4.jpg" alt="EO 4" onerror="this.style.display='none'; this.parentElement.innerText='Photo 4';"></a>
                         </div>
                     </div>
                 </div>
@@ -910,13 +909,13 @@
 
                     <div class="exp-media-side grid-soko-3foto">
                         <div class="media-box soko-foto-box">
-                            <a href="soko-foto-1.jpg" target="_blank" class="img-clickable"><img src="soko-foto-1.jpg" alt="Soko 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                            <a href="soko-foto-1.jpg" class="img-clickable"><img src="soko-foto-1.jpg" alt="Soko 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
                         </div>
                         <div class="media-box soko-foto-box">
-                            <a href="soko-foto-2.jpg" target="_blank" class="img-clickable"><img src="soko-foto-2.jpg" alt="Soko 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                            <a href="soko-foto-2.jpg" class="img-clickable"><img src="soko-foto-2.jpg" alt="Soko 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
                         </div>
                         <div class="media-box soko-foto-box">
-                            <a href="soko-foto-3.jpg" target="_blank" class="img-clickable"><img src="soko-foto-3.jpg" alt="Soko 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
+                            <a href="soko-foto-3.jpg" class="img-clickable"><img src="soko-foto-3.jpg" alt="Soko 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
                         </div>
                     </div>
                 </div>
@@ -943,10 +942,10 @@
 
                     <div class="exp-media-side grid-reddoorz-original">
                         <div class="reddoorz-box">
-                            <a href="reddoorz-foto-1.jpg" target="_blank" class="img-clickable"><img src="reddoorz-foto-1.jpg" alt="Reddoorz 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                            <a href="reddoorz-foto-1.jpg" class="img-clickable"><img src="reddoorz-foto-1.jpg" alt="Reddoorz 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
                         </div>
                         <div class="reddoorz-box">
-                            <a href="reddoorz-foto-2.jpg" target="_blank" class="img-clickable"><img src="reddoorz-foto-2.jpg" alt="Reddoorz 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                            <a href="reddoorz-foto-2.jpg" class="img-clickable"><img src="reddoorz-foto-2.jpg" alt="Reddoorz 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
                         </div>
                     </div>
                 </div>
@@ -961,33 +960,28 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>Chief Operating Officer - Velveta Cheesecuit</h3>
-                    <span>Student Business Startup (Introduction to Management and Digital Business)</span>
+                    <span>Startup Project & Operations</span>
                 </div>
                 <div class="project-body">
                     <div class="project-text-side">
                         <div class="project-col">
-                            <h4><i class="fa-solid fa-bullseye"></i> Brief / Challenge</h4>
-                            <p>Developing a culinary business startup from scratch with the challenge of achieving Break Even Point (BEP) within 4 months while accelerating internal production workflow efficiency.</p>
+                            <h4><i class="fa-solid fa-bullseye"></i> Role & Contribution</h4>
+                            <p>Managed end-to-end operational workflows, financial planning, and production scaling for a 4-month startup project, successfully achieving a full return on investment (ROI).</p>
                         </div>
                         <div class="project-col">
-                            <h4><i class="fa-solid fa-gears"></i> Process</h4>
-                            <p>Designing internal workflows that accelerated production speed by up to 40%, tightly managing operational budgets, and negotiating with suppliers to reduce operational costs by 15%.</p>
-                        </div>
-                        <div class="project-col">
-                            <h4><i class="fa-solid fa-award"></i> Results</h4>
-                            <p>Successfully achieved Break Even Point (BEP) and generated net profit within the first 4 months of operation while maintaining consistent product quality.</p>
+                            <h4><i class="fa-solid fa-chart-line"></i> Key Achievement</h4>
+                            <p>Optimized supply chain logistics and reduced inventory wastage by 15%, improving overall profit margins.</p>
                         </div>
                     </div>
-
                     <div class="project-gallery-side gallery-velveta-landscape">
                         <div class="project-img-box landscape-box-velveta">
-                            <a href="velveta-land-1.jpg" target="_blank" class="img-clickable"><img src="velveta-land-1.jpg" alt="Landscape 1" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 1';"></a>
+                            <a href="velveta-land-1.jpg" class="img-clickable"><img src="velveta-land-1.jpg" alt="Velveta 1" onerror="this.style.display='none'; this.parentElement.innerText='Project Photo 1';"></a>
                         </div>
                         <div class="project-img-box landscape-box-velveta">
-                            <a href="velveta-land-2.jpg" target="_blank" class="img-clickable"><img src="velveta-land-2.jpg" alt="Landscape 2" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 2';"></a>
+                            <a href="velveta-land-2.jpg" class="img-clickable"><img src="velveta-land-2.jpg" alt="Velveta 2" onerror="this.style.display='none'; this.parentElement.innerText='Project Photo 2';"></a>
                         </div>
                         <div class="project-img-box landscape-box-velveta">
-                            <a href="velveta-land-3.jpg" target="_blank" class="img-clickable"><img src="velveta-land-3.jpg" alt="Landscape 3" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 3';"></a>
+                            <a href="velveta-land-3.jpg" class="img-clickable"><img src="velveta-land-3.jpg" alt="Velveta 3" onerror="this.style.display='none'; this.parentElement.innerText='Project Photo 3';"></a>
                         </div>
                     </div>
                 </div>
@@ -997,81 +991,79 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3>Marketing Strategy Analyst</h3>
-                    <span>Design Thinking Research Project</span>
+                    <span>Market Research & Business Insights</span>
                 </div>
                 <div class="project-body">
                     <div class="project-text-side">
                         <div class="project-col">
-                            <h4><i class="fa-solid fa-bullseye"></i> Brief / Challenge</h4>
-                            <p>Understanding consumer behavior and performing accurate market audience segmentation through in-depth qualitative research approaches.</p>
+                            <h4><i class="fa-solid fa-magnifying-glass-chart"></i> Project Overview</h4>
+                            <p>Conducted comprehensive market research, competitor analysis, and consumer behavior evaluations for small and medium enterprises to boost brand positioning.</p>
                         </div>
                         <div class="project-col">
-                            <h4><i class="fa-solid fa-gears"></i> Process</h4>
-                            <p>Conducting comprehensive market research via interviews and social media trend observation to identify core consumer habits.</p>
-                        </div>
-                        <div class="project-col">
-                            <h4><i class="fa-solid fa-award"></i> Results</h4>
-                            <p>Translating field research findings into actionable, measurable marketing strategies to position the brand uniquely in the market.</p>
+                            <h4><i class="fa-solid fa-lightbulb"></i> Impact</h4>
+                            <p>Delivered strategic recommendations that enhanced customer engagement metrics and targeted outreach efficiency.</p>
                         </div>
                     </div>
-
                     <div class="project-gallery-side gallery-strategy-side">
                         <div class="project-img-box strategy-box-fit">
-                            <a href="strategy-foto-1.jpg" target="_blank" class="img-clickable"><img src="strategy-foto-1.jpg" alt="Strategy 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                            <a href="strategy-foto-1.jpg" class="img-clickable"><img src="strategy-foto-1.jpg" alt="Strategy 1" onerror="this.style.display='none'; this.parentElement.innerText='Strategy Photo 1';"></a>
                         </div>
                         <div class="project-img-box strategy-box-fit">
-                            <a href="strategy-foto-2.jpg" target="_blank" class="img-clickable"><img src="strategy-foto-2.jpg" alt="Strategy 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                            <a href="strategy-foto-2.jpg" class="img-clickable"><img src="strategy-foto-2.jpg" alt="Strategy 2" onerror="this.style.display='none'; this.parentElement.innerText='Strategy Photo 2';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Project Soko -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Video Campaign & Social Media Execution</h3>
+                    <span>Digital Media & Content Production</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-text-side">
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-video"></i> Campaign Highlights</h4>
+                            <p>Produced promotional video assets and dynamic visual contents for brand campaigns to maximize digital reach and audience retention.</p>
+                        </div>
+                    </div>
+                    <div class="project-gallery-side">
+                        <div class="project-img-box" style="height: 140px;">
+                            <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                                <source src="video-soko.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Let's Collaborate Section -->
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Let's Collaborate</h2>
-            
             <div class="contact-container">
-                <!-- Web3Forms Contact Form -->
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="53f45b2a-0f69-4f57-99d1-1bbba694cae0">
-
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your name..." required>
-                    </div>
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
                     
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="name@email.com" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Subject / Purpose</label>
-                        <input type="text" name="subject" id="subject" placeholder="e.g. Job Offer / Collaboration">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Write your message or job offer details here..." required></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Write your message or collaboration proposal here..."></textarea>
                     </div>
-                    
-                    <button type="submit" class="submit-btn" style="margin-bottom: 20px;">
-                        <i class="fas fa-paper-plane"></i> Send Message via Email
-                    </button>
+
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
                 </form>
-
-                <!-- Divider -->
-                <div style="display: flex; align-items: center; text-align: center; margin: 25px 0; color: var(--text-muted);">
-                    <hr style="flex: 1; border: none; border-top: 1px solid #E2E8F0;">
-                    <span style="padding: 0 15px; font-size: 0.9rem; font-weight: 600;">OR REACH OUT DIRECTLY</span>
-                    <hr style="flex: 1; border: none; border-top: 1px solid #E2E8F0;">
-                </div>
-
-                <!-- Direct WhatsApp Button -->
-                <a href="https://wa.me/6281919456255?text=Hello%20Megan,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20collaborate." target="_blank" class="btn" style="display: flex; justify-content: center; align-items: center; gap: 10px; background-color: #25D366; color: white; width: 100%; padding: 14px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.3s;">
-                    <i class="fab fa-whatsapp fa-lg"></i> Chat via WhatsApp (+62 819-1945-6255)
-                </a>
             </div>
         </section>
 
@@ -1081,14 +1073,11 @@
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/rut-megandari" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="mailto:megandarirut@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://drive.google.com/file/d/1lMUXTNo8z_aE-NRPP86ADkjwOEIKR3ft/view?usp=sharing" target="_blank" title="Certificate"><i class="fa-solid fa-file-pdf"></i></a>
+                <a href="https://www.linkedin.com/in/rut-megandari" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:megandarirut@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/rutmegandarimegandari-star" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
-
-            <div class="copyright">
-                &copy; 2026 Rut Megandari. All Rights Reserved.
-            </div>
+            <p class="copyright">&copy; 2026 Rut Megandari. All rights reserved.</p>
         </div>
     </footer>
 
