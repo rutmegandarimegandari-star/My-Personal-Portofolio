@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rut Megandari - Portfolio & Professional Profile</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --maroon: #7A1C2E;
+            --maroon-dark: #58131F;
+            --forest-green: #2C5E3B;
+            --green-light: #E8F5E9;
+            --bg-color: #FDFBF7;
+            --text-dark: #2D2D2D;
+            --text-muted: #666666;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(122, 28, 46, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Navbar */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--maroon);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--maroon);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 11rem 2rem 5rem;
+            background: linear-gradient(135deg, rgba(122, 28, 46, 0.03) 0%, rgba(44, 94, 59, 0.05) 100%);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .profile-shadow-wrapper {
+            position: relative;
+            width: 240px;
+            height: 280px;
+        }
+
+        .profile-shadow-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--maroon);
+            border-radius: 20px;
+            z-index: 1;
+            opacity: 0.85;
+        }
+
+        .profile-img-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 4px solid var(--forest-green);
+            background-color: var(--white);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .profile-shadow-wrapper:hover .profile-img-container {
+            transform: translate(-5px, -5px);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .hero-text h1 {
+            font-size: 2.6rem;
+            color: var(--maroon);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero-text h3 {
+            font-size: 1.2rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--maroon);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(122, 28, 46, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--forest-green);
+            border: 2px solid var(--forest-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--forest-green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--maroon);
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--forest-green);
+            border-radius: 2px;
+        }
+
+        /* Profile Summary Card */
+        .profile-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--maroon);
+        }
+
+        .profile-card p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background: var(--bg-color);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-item i {
+            color: var(--forest-green);
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+
+        .info-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item strong {
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            margin-bottom: 2px;
+        }
+
+        .info-item span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Skills Section (Rapi 4 Kiri, 4 Kanan) */
+        .skills-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-box {
+            background-color: var(--green-light);
+            color: var(--forest-green);
+            padding: 0.9rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(44, 94, 59, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Experience Cards */
+        .experience-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-left: 6px solid var(--forest-green);
+            transition: var(--transition);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .exp-title h3 {
+            font-size: 1.25rem;
+            color: var(--maroon);
+        }
+
+        .exp-title h4 {
+            font-size: 1rem;
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        .exp-date {
+            background: var(--green-light);
+            color: var(--forest-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .exp-content-grid {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .exp-text-side {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .exp-media-side {
+            width: 240px;
+            flex-shrink: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        /* Styling Efek Hover untuk Gambar yang Bisa Di-klik */
+        .img-clickable {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .img-clickable:hover {
+            opacity: 0.85;
+            transform: scale(1.03);
+        }
+
+        /* EO */
+        .grid-eo-original {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-eo-original .eo-box {
+            height: 95px;
+        }
+        .grid-eo-original .eo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Soko Financial */
+        .grid-soko-3foto {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .soko-foto-box {
+            height: 150px;
+        }
+        .soko-foto-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* RedDoorz */
+        .grid-reddoorz-original {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .reddoorz-box {
+            width: 100%;
+            height: 140px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--forest-green);
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .reddoorz-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .media-box {
+            width: 100%;
+            height: 95px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--forest-green);
+            background-color: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        .exp-list {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        .exp-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .exp-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--maroon);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .project-header span {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            background: rgba(255,255,255,0.15);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .project-body {
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .project-text-side {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project-col h4 {
+            color: var(--forest-green);
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .project-gallery-side {
+            width: 240px;
+            flex-shrink: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .gallery-velveta-landscape {
+            grid-template-columns: 1fr;
+        }
+        .landscape-box-velveta {
+            height: 110px;
+        }
+        .landscape-box-velveta img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-strategy-side {
+            grid-template-columns: 1fr;
+        }
+        .strategy-box-fit {
+            height: 130px;
+        }
+        .strategy-box-fit img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-img-box {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--forest-green);
+            background-color: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        /* Contact Section Styling */
+        .contact-container {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--forest-green);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--bg-color);
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--forest-green);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(44, 94, 59, 0.1);
+        }
+
+        .submit-btn {
+            background-color: var(--maroon);
+            color: var(--white);
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--maroon-dark);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--forest-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .exp-content-grid,
+            .project-body {
+                flex-direction: column;
+            }
+            .exp-media-side,
+            .project-gallery-side {
+                width: 100%;
+            }
+            .cta-buttons {
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-feather"></i> Rut Megandari</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills & Expertise</a></li>
+                <li><a href="#experience">Work & Internship Experience</a></li>
+                <li><a href="#portfolio">Featured Projects</a></li>
+                <li><a href="#contact">Let's Collaborate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Hello, I'm Rut Megandari</h1>
+                <h3>Talent Acquisition Enthusiast | Content Creator | Event Coordinator</h3>
+                <p>Connecting top talent with opportunities, and crafting stories through digital content and precise event operations.</p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> View Portfolio</a>
+                    <a href="https://www.linkedin.com/in/rut-megandari" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="profile-shadow-wrapper">
+                    <div class="profile-img-container">
+                        <a href="foto-rut.jpg" target="_blank" class="img-clickable">
+                            <img src="foto-rut.jpg" alt="Rut Megandari">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="profile-card">
+                <p>Digital Business student in semester 2 at Universitas Cakrawala with active experience in Talent Acquisition as an HR Recruiter/Consultant, handling candidate sourcing, screening, initial interviewing, and end-to-end recruitment management using LinkedIn Recruiter and Boolean Search techniques.</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="info-content">
+                            <strong>Location</strong>
+                            <span>South Jakarta, Indonesia</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="info-content">
+                            <strong>Email</strong>
+                            <span>megandarirut@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="info-content">
+                            <strong>Education</strong>
+                            <span>Universitas Cakrawala (Digital Business)</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div class="info-content">
+                            <strong>Certificate</strong>
+                            <span><a href="https://drive.google.com/file/d/1lMUXTNo8z_aE-NRPP86ADkjwOEIKR3ft/view?usp=sharing" target="_blank" style="color: var(--forest-green); text-decoration: underline;">View Certificate Document</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise Section -->
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="profile-card">
+                <p style="margin-bottom: 1.5rem;">A combination of functional skills in recruitment, operational management, and digital strategy:</p>
+                <div class="skills-grid-container">
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Candidate Sourcing & Boolean Search</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Operation & Vendor Management</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> CV Screening & Interviewing</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Content Creation (Canva & CapCut)</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Client Consultation</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Qualitative Research</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> End-to-End Recruitment Management</div>
+                    <div class="skill-box"><i class="fa-solid fa-check"></i> Mandarin (HSK 1 - On Progress to HSK 3)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work & Internship Experience Section -->
+        <section id="experience">
+            <h2>Work & Internship Experience</h2>
+
+            <!-- HireBox -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>HR Recruiter | Consultant | Talent Acquisition</h3>
+                        <h4>HireBox - Indonesia</h4>
+                    </div>
+                    <span class="exp-date">August 2026 - Present</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Active candidate sourcing utilizing LinkedIn Recruiter, internal databases, professional networks, and Boolean search techniques.</li>
+                    <li>Conducting CV screenings, initial interviews, and evaluating technical qualifications alongside cultural fit.</li>
+                    <li>Consulting with clients to understand job specifications, market expectations, remuneration standards, and recruitment timelines.</li>
+                    <li>Facilitating interview scheduling, job offer negotiations, and onboarding to successfully achieve placement targets within SLA.</li>
+                </ul>
+            </div>
+
+            <!-- Event Organizer -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Freelance Event Organizer (Event Operational Coordinator)</h3>
+                        <h4>House of Gendhis - Bekasi, Indonesia</h4>
+                    </div>
+                    <span class="exp-date">January 2026 - Present</span>
+                </div>
+
+                <div class="exp-content-grid">
+                    <div class="exp-text-side">
+                        <ul class="exp-list" style="margin-top: 0;">
+                            <li>Coordinating on-site operations for large-scale weddings (1000+ guests), covering catering vendors, sound systems, and VIP guest services.</li>
+                            <li>Strictly monitoring rundown implementation to ensure seamless transitions between event sessions on schedule.</li>
+                            <li>Resolving unexpected technical on-site issues with quick solutions, maintaining client satisfaction and event flow.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-media-side grid-eo-original">
+                        <div class="media-box eo-box">
+                            <a href="foto-eo-1.jpg" target="_blank" class="img-clickable"><img src="foto-eo-1.jpg" alt="EO 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                        </div>
+                        <div class="media-box eo-box">
+                            <a href="foto-eo-2.jpg" target="_blank" class="img-clickable"><img src="foto-eo-2.jpg" alt="EO 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                        </div>
+                        <div class="media-box eo-box">
+                            <a href="foto-eo-3.jpg" target="_blank" class="img-clickable"><img src="foto-eo-3.jpg" alt="EO 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
+                        </div>
+                        <div class="media-box eo-box">
+                            <a href="foto-eo-4.jpg" target="_blank" class="img-clickable"><img src="foto-eo-4.jpg" alt="EO 4" onerror="this.style.display='none'; this.parentElement.innerText='Photo 4';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soko Financial -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Content Creator Intern</h3>
+                        <h4>Soko Financial - Yogyakarta, Indonesia</h4>
+                    </div>
+                    <span class="exp-date">May 2026 - August 2026</span>
+                </div>
+
+                <div class="exp-content-grid">
+                    <div class="exp-text-side">
+                        <ul class="exp-list" style="margin-top: 0;">
+                            <li>Producing content based on copywriting briefs and documenting work results through team spreadsheets for easy progress tracking.</li>
+                            <li>Drafting cover briefs for design requests submitted to the design team to maintain consistent visual content branding.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-media-side grid-soko-3foto">
+                        <div class="media-box soko-foto-box">
+                            <a href="soko-foto-1.jpg" target="_blank" class="img-clickable"><img src="soko-foto-1.jpg" alt="Soko 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                        </div>
+                        <div class="media-box soko-foto-box">
+                            <a href="soko-foto-2.jpg" target="_blank" class="img-clickable"><img src="soko-foto-2.jpg" alt="Soko 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                        </div>
+                        <div class="media-box soko-foto-box">
+                            <a href="soko-foto-3.jpg" target="_blank" class="img-clickable"><img src="soko-foto-3.jpg" alt="Soko 3" onerror="this.style.display='none'; this.parentElement.innerText='Photo 3';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RedDoorz -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-title">
+                        <h3>Content Creator Intern</h3>
+                        <h4>Reddoorz - Jakarta, Indonesia</h4>
+                    </div>
+                    <span class="exp-date">January 2026 - May 2026</span>
+                </div>
+
+                <div class="exp-content-grid">
+                    <div class="exp-text-side">
+                        <ul class="exp-list" style="margin-top: 0;">
+                            <li>Producing content for Instagram, TikTok, Facebook, and X using Canva and CapCut to support digital marketing strategies.</li>
+                            <li>Managing consistent content upload schedules across various social media platforms.</li>
+                            <li>Responding to customer inquiries regarding room bookings and assisting with online reservation processes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-media-side grid-reddoorz-original">
+                        <div class="reddoorz-box">
+                            <a href="reddoorz-foto-1.jpg" target="_blank" class="img-clickable"><img src="reddoorz-foto-1.jpg" alt="Reddoorz 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                        </div>
+                        <div class="reddoorz-box">
+                            <a href="reddoorz-foto-2.jpg" target="_blank" class="img-clickable"><img src="reddoorz-foto-2.jpg" alt="Reddoorz 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="portfolio">
+            <h2>Featured Projects</h2>
+            
+            <!-- Velveta Cheesecuit -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Chief Operating Officer - Velveta Cheesecuit</h3>
+                    <span>Student Business Startup (Introduction to Management and Digital Business)</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-text-side">
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-bullseye"></i> Brief / Challenge</h4>
+                            <p>Developing a culinary business startup from scratch with the challenge of achieving Break Even Point (BEP) within 4 months while accelerating internal production workflow efficiency.</p>
+                        </div>
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-gears"></i> Process</h4>
+                            <p>Designing internal workflows that accelerated production speed by up to 40%, tightly managing operational budgets, and negotiating with suppliers to reduce operational costs by 15%.</p>
+                        </div>
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-award"></i> Results</h4>
+                            <p>Successfully achieved Break Even Point (BEP) and generated net profit within the first 4 months of operation while maintaining consistent product quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery-side gallery-velveta-landscape">
+                        <div class="project-img-box landscape-box-velveta">
+                            <a href="velveta-land-1.jpg" target="_blank" class="img-clickable"><img src="velveta-land-1.jpg" alt="Landscape 1" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 1';"></a>
+                        </div>
+                        <div class="project-img-box landscape-box-velveta">
+                            <a href="velveta-land-2.jpg" target="_blank" class="img-clickable"><img src="velveta-land-2.jpg" alt="Landscape 2" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 2';"></a>
+                        </div>
+                        <div class="project-img-box landscape-box-velveta">
+                            <a href="velveta-land-3.jpg" target="_blank" class="img-clickable"><img src="velveta-land-3.jpg" alt="Landscape 3" onerror="this.style.display='none'; this.parentElement.innerText='Landscape 3';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Strategy Analyst -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Marketing Strategy Analyst</h3>
+                    <span>Design Thinking Research Project</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-text-side">
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-bullseye"></i> Brief / Challenge</h4>
+                            <p>Understanding consumer behavior and performing accurate market audience segmentation through in-depth qualitative research approaches.</p>
+                        </div>
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-gears"></i> Process</h4>
+                            <p>Conducting comprehensive market research via interviews and social media trend observation to identify core consumer habits.</p>
+                        </div>
+                        <div class="project-col">
+                            <h4><i class="fa-solid fa-award"></i> Results</h4>
+                            <p>Translating field research findings into actionable, measurable marketing strategies to position the brand uniquely in the market.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery-side gallery-strategy-side">
+                        <div class="project-img-box strategy-box-fit">
+                            <a href="strategy-foto-1.jpg" target="_blank" class="img-clickable"><img src="strategy-foto-1.jpg" alt="Strategy 1" onerror="this.style.display='none'; this.parentElement.innerText='Photo 1';"></a>
+                        </div>
+                        <div class="project-img-box strategy-box-fit">
+                            <a href="strategy-foto-2.jpg" target="_blank" class="img-clickable"><img src="strategy-foto-2.jpg" alt="Strategy 2" onerror="this.style.display='none'; this.parentElement.innerText='Photo 2';"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Let's Collaborate Section -->
+        <section id="contact">
+            <h2>Let's Collaborate</h2>
+            
+            <div class="contact-container">
+                <!-- Web3Forms Contact Form -->
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="53f45b2a-0f69-4f57-99d1-1bbba694cae0">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="name@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject / Purpose</label>
+                        <input type="text" name="subject" id="subject" placeholder="e.g. Job Offer / Collaboration">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Write your message or job offer details here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" style="margin-bottom: 20px;">
+                        <i class="fas fa-paper-plane"></i> Send Message via Email
+                    </button>
+                </form>
+
+                <!-- Divider -->
+                <div style="display: flex; align-items: center; text-align: center; margin: 25px 0; color: var(--text-muted);">
+                    <hr style="flex: 1; border: none; border-top: 1px solid #E2E8F0;">
+                    <span style="padding: 0 15px; font-size: 0.9rem; font-weight: 600;">OR REACH OUT DIRECTLY</span>
+                    <hr style="flex: 1; border: none; border-top: 1px solid #E2E8F0;">
+                </div>
+
+                <!-- Direct WhatsApp Button -->
+                <a href="https://wa.me/6281919456255?text=Hello%20Megan,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20collaborate." target="_blank" class="btn" style="display: flex; justify-content: center; align-items: center; gap: 10px; background-color: #25D366; color: white; width: 100%; padding: 14px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.3s;">
+                    <i class="fab fa-whatsapp fa-lg"></i> Chat via WhatsApp (+62 819-1945-6255)
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rut-megandari" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:megandarirut@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://drive.google.com/file/d/1lMUXTNo8z_aE-NRPP86ADkjwOEIKR3ft/view?usp=sharing" target="_blank" title="Certificate"><i class="fa-solid fa-file-pdf"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2026 Rut Megandari. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
